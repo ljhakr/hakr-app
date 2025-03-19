@@ -45,13 +45,7 @@ function showEventsList() {
       <div class="mb-20">
         <h2 class="mb-0">Tailwind</h2>
         <p>Tailwind transitions are done with classes</p>
-        <h3>Click to toggle between light and dark theme</h3>
-        <div data-theme>
-          <TransitionButton :isDarkTheme="isDarkTheme" @toggleDarkTheme="toggleTheme"
-                            :class="'bg-blue-300 text-gray-900 dark:bg-blue-900 dark:text-gray-100 duration-300'">
-            Button
-          </TransitionButton>
-        </div>
+        WIP
       </div>
 
       <div class="mb-20">

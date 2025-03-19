@@ -1,5 +1,4 @@
 <script setup>
-import ButtonCounter from '@/components/ButtonCounter.vue';
 import PageHeading from '@/components/PageHeading.vue';
 import ModalScreen from '@/prototypes/ModalScreen.vue';
 import {ref} from 'vue';
@@ -17,7 +16,6 @@ function closeModal() {
   enable()
   //scrollPrevent();
 }
-
 
 //https://alvarotrigo.com/blog/prevent-scroll-on-scrollable-element-js/
 // https://stackoverflow.com/questions/55548261/unable-to-preventdefault-inside-passive-event-listener-due-to-target-being-treat
@@ -44,9 +42,6 @@ function enable(){
   }, 200)
 }
 
-
-
-
 function scrollPrevent() {
   //styles seem to have no influence on scrolling in Safari
   body?.classList.toggle('overflow-y-hidden');
@@ -57,7 +52,6 @@ function scrollPrevent() {
     <div class="mx-auto text-center">
       <PageHeading :title="'Vue Modal'" :subTitle="''"></PageHeading>
       <div class="mx-auto columns-1">
-        <ButtonCounter></ButtonCounter>
         <a href="#" class="underline underline-offset-2 inline-block mt-2" @click="openModal">About this counter</a>
       </div>
     </div>

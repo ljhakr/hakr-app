@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import {ref} from "vue";
 import RadioInput from '@/components/forms/RadioInput.vue'
+import Checkbox from '@/components/forms/Checkbox.vue'
 import EmailInput from '@/components/forms/EmailInput.vue'
 import TextInput from '@/components/forms/TextInput.vue'
 import TextAreaInput from '@/components/forms/TextAreaInput.vue'
@@ -10,6 +11,7 @@ const messageCheck = ref(false)
 const messageTitle = ref('')
 const messageText = ref('')
 const messageSenderEmail = ref('')
+const checkedNames = ref([])
 
 const submit = () => {
   console.log("Newsletter Submitted", {
@@ -19,12 +21,25 @@ const submit = () => {
     email: messageSenderEmail,
   });
 }
-
-
 </script>
 
 <template>
   <form @submit.prevent="submit">
+    <div class="mb-2">
+      <label for="henry">
+        <input type="checkbox" id="henry" value="Henry" v-model="checkedNames"/>
+        Henry
+      </label>
+      <label for="mike">
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames"/>
+        Mike
+      </label>
+      <label for="john">
+        <input type="checkbox" id="john" value="John" v-model="checkedNames"/>
+        John
+      </label>
+      <p>The names are: {{ checkedNames }}</p>
+    </div>
     <div class="mb-2">
       <label for="">
       <RadioInput v-model:check="messageCheck"/>

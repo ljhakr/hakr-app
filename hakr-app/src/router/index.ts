@@ -26,12 +26,6 @@ const routes: Array<RouteRecordRaw> = [
         import("../views/NoticeMessages.vue"),
   },
   {
-    path: "/tooltips",
-    name: "tooltips",
-    component: () =>
-        import("../views/TooltipsPage.vue"),
-  },
-  {
     path: "/reactive-button",
     name: "ref-and-template-ref",
     component: () =>
@@ -53,13 +47,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/reactive-book-counter",
     name: "reactive-book-counter",
     component: () =>
-        import("../views/ReactiveBookCounterPage.vue"),
-  },
-  {
-    path: "/theme",
-    name: "theme",
-    component: () =>
-        import("../views/ThemePage.vue"),
+        import("../views/ReactiveCounterPage.vue"),
   },
   {
     path: "/transitions",
@@ -75,7 +63,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/reactive-collapse",
-    name: "Reactive show & hide",
+    name: "Read more fold out",
     component: () =>
         import("../views/ReactiveShowHidePage.vue"),
   },
@@ -108,6 +96,12 @@ const routes: Array<RouteRecordRaw> = [
     name: "Emoji",
     component: () =>
         import("../views/EmojiPicker.vue"),
+  },
+  {
+    path: "/composable",
+    name: "Composable",
+    component: () =>
+        import("../views/ComposableView.vue"),
   },
 ];
 

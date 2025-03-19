@@ -6,6 +6,7 @@ const obj = ref({count: 0});
 // template ref
 const btn = ref()
 const itsacount = ref({count: 2})
+
 onMounted(() => {
   btn.value.addEventListener('click', () => {
     itsacount.value.count++

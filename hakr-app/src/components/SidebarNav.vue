@@ -10,7 +10,7 @@ const items = [
   },
   {
     id: 1,
-    title: 'Notice messages',
+    title: 'Notice message with slot',
     url: '/notice-messages',
     icon: '2'
   },
@@ -21,23 +21,18 @@ const items = [
     icon: '3'
   },
   {
-    id: 4,
-    title: 'Tooltips',
-    url: '/tooltips',
-  },
-  {
     id: 5,
     title: 'Ref and Template ref',
     url: '/reactive-button',
   },
   {
     id: 8,
-    title: 'Reactive Book counter',
+    title: 'Reactive counter with notice message',
     url: '/reactive-book-counter',
   },
   {
     id: 12,
-    title: 'Reactive Show & Hide',
+    title: 'Read more fold out',
     url: '/reactive-collapse',
   },
   {
@@ -49,11 +44,6 @@ const items = [
     id: 7,
     title: 'Vue modal',
     url: '/modal',
-  },
-  {
-    id: 9,
-    title: 'Theme',
-    url: '/theme',
   },
   {
     id: 10,
@@ -89,6 +79,11 @@ const items = [
     id: 17,
     title: 'Emoji',
     url: '/emoji',
+  },
+  {
+    id: 18,
+    title: 'Composable',
+    url: '/composable',
   },
 ];
 </script>

@@ -4,7 +4,7 @@ import {EmojiButton} from '@joeattardi/emoji-button';
 
 interface Props {
   modelValue?: string;
-  options?: any
+  options?:  any
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -35,11 +35,12 @@ onMounted(() => {
 
 <template>
   <div class="input-group">
-    <input :value="props.modelValue.emoji" class="border border-blue py-2 px-3 rounded-md rounded-r-none" readonly type="text"/>
+    <input :value="props.modelValue.emoji" class="border border-blue py-2 px-3 rounded-md rounded-r-none" />
+
     <button ref="btn"
             class="bg-gray-light hover:bg-gray-dark hover:text-white hover:scale-105 transition ease-in duration-75 py-2 px-3 rounded-md rounded-l-none"
             role="button" type="button">
-      {{ props.modelValue ? props.modelValue.emoji : 'Select 123' }}
+      {{ props.modelValue ? props.modelValue.emoji : 'Choose emoji' }}
     </button>
   </div>
   <p v-show="props.modelValue.name">Emoji: "{{ props.modelValue.name }}"</p>

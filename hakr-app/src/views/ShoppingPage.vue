@@ -83,11 +83,7 @@ const togglePurchased = (item) => {
         <li
             v-for="(item, id) in reversedItems"
             :key=id
-            :class="[
-              item.purchased ? '!text-muted line-through' : '',
-              item.highPriority ? 'priority' : '',
-              { 'font-bold' : item.highPriority }
-            ]"
+            ^
             @click="togglePurchased(item)"
         >
           {{ item.id + ' - ' }}{{ item.label }}

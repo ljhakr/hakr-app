@@ -1,6 +1,6 @@
 <template>
   <input
-      type="radio"
+      type="checkbox"
       v-model="value"
       class="bg-gray-100"
       :class="{
