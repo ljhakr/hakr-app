@@ -1,0 +1,99 @@
+<script setup lang="ts">
+import MenuItem from '@/prototypes/MenuItem.vue';
+
+const items = [
+  {
+    id: 0,
+    title: 'Dashboard',
+    url: '/',
+    icon: '1'
+  },
+  {
+    id: 1,
+    title: 'Notice message with slot',
+    url: '/notice-messages',
+    icon: '2'
+  },
+  {
+    id: 2,
+    title: 'Cards / slot / router link / console log',
+    url: '/cards',
+    icon: '3'
+  },
+  {
+    id: 5,
+    title: 'Ref and Template ref',
+    url: '/reactive-button',
+  },
+  {
+    id: 8,
+    title: 'Reactive counter with notice message',
+    url: '/reactive-book-counter',
+  },
+  {
+    id: 12,
+    title: 'Read more fold out',
+    url: '/reactive-collapse',
+  },
+  {
+    id: 6,
+    title: 'Toasts',
+    url: '/toasts',
+  },
+  {
+    id: 7,
+    title: 'Vue modal',
+    url: '/modal',
+  },
+  {
+    id: 10,
+    title: 'Transitions',
+    url: '/transitions',
+  },
+  {
+    id: 11,
+    title: 'Animations',
+    url: '/animations',
+  },
+  {
+    id: 13,
+    title: 'DeCapitalizr',
+    url: '/decapitalizr',
+  },
+  {
+    id: 14,
+    title: 'Shopping',
+    url: '/shopping',
+  },
+  {
+    id: 15,
+    title: 'Form',
+    url: '/form',
+  },
+  {
+    id: 16,
+    title: 'Vee-validate form',
+    url: '/vee-form',
+  },
+  {
+    id: 17,
+    title: 'Emoji',
+    url: '/emoji',
+  },
+  {
+    id: 18,
+    title: 'Composable',
+    url: '/composable',
+  },
+];
+</script>
+
+<template>
+  <div class="w-full md:w-80 w-full md:w-80 px-3 md:px-0">
+    <div class="md:p-4 overflow-y-auto md:bg-blue-400 rounded-r-lg overflow-y-auto">
+      <ul class="kre-navigation space-x-4 md:space-y-2 md:space-x-0">
+        <MenuItem v-for="item in items" :key="item.id" :title="item.title" :icon="item.icon" :url="item.url"></MenuItem>
+      </ul>
+    </div>
+  </div>
+</template>

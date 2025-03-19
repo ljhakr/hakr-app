@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import {defineProps} from 'vue';
+
+defineProps<{
+  hrClass?: string
+}>();
+</script>
 <template>
-  <hr class="mb-8 text-gray-200">
+  <hr :class="hrClass" class="text-gray-200">
 </template>

@@ -8,10 +8,100 @@ const routes: Array<RouteRecordRaw> = [
     component: HomePage,
   },
   {
-    path: "/about",
-    name: "about",
+    path: "/cards",
+    name: "cards",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutPage.vue"),
+        import("../views/CardsPage.vue"),
+  },
+  {
+    path: "/events",
+    name: "events",
+    component: () =>
+      import("../views/EventsPage.vue"),
+  },
+  {
+    path: "/notice-messages",
+    name: "notice-messages",
+    component: () =>
+        import("../views/NoticeMessages.vue"),
+  },
+  {
+    path: "/reactive-button",
+    name: "ref-and-template-ref",
+    component: () =>
+        import("../views/ReactiveButtonPage.vue"),
+  },
+  {
+    path: "/toasts",
+    name: "toasts",
+    component: () =>
+        import("../views/ToastsPage.vue"),
+  },
+  {
+    path: "/modal",
+    name: "modal",
+    component: () =>
+        import("../views/ModalPage.vue"),
+  },
+  {
+    path: "/reactive-book-counter",
+    name: "reactive-book-counter",
+    component: () =>
+        import("../views/ReactiveCounterPage.vue"),
+  },
+  {
+    path: "/transitions",
+    name: "Transitions",
+    component: () =>
+        import("../views/TransitionsPage.vue"),
+  },
+  {
+    path: "/animations",
+    name: "Animations",
+    component: () =>
+        import("../views/AnimationsPage.vue"),
+  },
+  {
+    path: "/reactive-collapse",
+    name: "Read more fold out",
+    component: () =>
+        import("../views/ReactiveShowHidePage.vue"),
+  },
+  {
+    path: "/decapitalizr",
+    name: "DeCapitalizr",
+    component: () =>
+        import("../views/DeCapitalizrPage.vue"),
+  },
+  {
+    path: "/shopping",
+    name: "Shopping",
+    component: () =>
+        import("../views/ShoppingPage.vue"),
+  },
+  {
+    path: "/form",
+    name: "Form",
+    component: () =>
+        import("../views/ExampleForm.vue"),
+  },
+  {
+    path: "/vee-form",
+    name: "Vee-validate form",
+    component: () =>
+        import("../views/VeeValidateForm.vue"),
+  },
+  {
+    path: "/emoji",
+    name: "Emoji",
+    component: () =>
+        import("../views/EmojiPicker.vue"),
+  },
+  {
+    path: "/composable",
+    name: "Composable",
+    component: () =>
+        import("../views/ComposableView.vue"),
   },
 ];
 

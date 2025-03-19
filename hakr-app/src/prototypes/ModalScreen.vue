@@ -1,38 +1,37 @@
 <script setup lang="ts">
-import { defineEmits, defineProps, watch } from 'vue';
+import {defineEmits, defineProps, watch} from 'vue';
 
 const props = defineProps({
-  show: { type: Boolean, default: false, required: true },
+  show: {type: Boolean, default: false, required: true},
 });
 
 const emits = defineEmits(['close']);
 
-function value (){
-  // On btn click the value will be true
-  console.log('ModalScreen modal value ' + props.show)
+const emitClose = () => {
+  emits('close');
+  console.log('Emitted CLOSE')
 }
-if (props.show) {
-  console.log("ModalScreen modal TRUE : true")
-} else {
-  // On btn click the value will be true
-  console.log("ModalScreen modal FALSE: false")
-}
+
 watch(props, async () => {
   if (props.show) {
     // On btn click the value will be false
-    console.log('ModaModalScreenlProto modal watch props TRUE ' + props.show)
+    console.log('ModalScreen modal watch props TRUE ' + props.show);
   } else {
-    console.log('ModalScreen modal watch props FALSE ' + props.show)
+    console.log('ModalScreen modal watch props FALSE ' + props.show);
   }
 });
 </script>
 <template>
   <Transition name="modal">
-    <div v-if="props.show" class="modal-mask fixed top-0 left-0 w-full h-full bg-black/50 table">
+    <div v-if="props.show" class="modal-mask fixed top-0 left-0 w-full h-full bg-black/70 table">
       <div class="modal-wrapper table-cell p-3">
-        <div class="modal-container w-full mx-auto p-3 bg-white rounded-sm shadow-md transition ease-in-out delay-50 duration-300">
-          <div class="modal-header">
-            <slot name="header">default header</slot>
+        <div
+            class="overflow-y-auto md:max-h-screen-1/2 modal-container w-full mx-auto p-3 bg-white rounded-sm shadow-md transition ease-in-out delay-50 duration-300">
+          <div class="modal-header flex">
+            <div class="w-4/5">
+              <slot name="header">default header</slot>
+            </div>
+            <div @click="emits('close');" class="w-1/5 text-end" aria-label="Close modal">X</div>
           </div>
           <div class="modal-body">
             <slot name="body">default body</slot>
@@ -42,8 +41,8 @@ watch(props, async () => {
               <slot name="footer">
                 <button
                     class="modal-default-button bg-blue-900 text-white py-2 px-3 rounded-md"
-                    @click="emits('close'); value()"
-                >Close
+                    @click="emitClose();"
+                >Close ccc
                 </button>
               </slot>
             </div>
