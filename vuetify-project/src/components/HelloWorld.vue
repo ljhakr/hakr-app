@@ -70,6 +70,9 @@
           </v-btn>
         </v-col>
       </v-row>
+      <v-row class="justify-center">
+        <h1 class="text-h4 font-weight-bold mb-6 mt-6 text-amber-darken-4">Not a active project</h1>
+      </v-row>
     </v-responsive>
   </v-container>
 </template>

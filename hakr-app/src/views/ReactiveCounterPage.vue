@@ -7,7 +7,7 @@ import ButtonCounter from "@/components/ButtonCounter.vue";
 <template>
   <div class="container bg-white mb-10">
     <div class="mx-auto text-center">
-      <PageHeading :title="'Reactive book counter'"></PageHeading>
+      <PageHeading :title="'Reactive counter with notice message and computed with return'"></PageHeading>
       <div class="columns-1">
         <div class="w-full text-center mb-8">
           <ReactiveBookCounter></ReactiveBookCounter>

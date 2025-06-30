@@ -1,19 +1,26 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import { defineProps, computed } from 'vue';
 
 const props = defineProps<{
-  noticeType?: string; default?: 'default'
+  noticeType?: string;
+  default?: 'default'
 }>();
 
-let noticeClass = '';
+// let noticeClass = '';
 
-if (props.noticeType === 'default') {
-  noticeClass = 'border-gray-700 text-gray-700';
-} else if (props.noticeType === 'success') {
-  noticeClass = 'border-green-700 text-green-700';
-} else {
-  noticeClass = 'border-danger-color text-danger-color';
-}
+// if (props.noticeType === 'default') {
+//   noticeClass = 'border-gray-700 text-gray-700';
+// } else if (props.noticeType === 'success') {
+//   noticeClass = 'border-green-700 text-green-700';
+// } else {
+//   noticeClass = 'border-danger-color text-danger-color';
+// }
+
+const noticeClass = computed(() => {
+  if (props.noticeType === 'default') return 'border-gray-700 text-gray-700';
+  if (props.noticeType === 'success') return 'border-green-700 text-green-700';
+  return 'border-danger-color text-danger-color';
+});
 </script>
 <template>
   <div :class="noticeClass" class="flex justify-center w-full bg-white text-center border-2 rounded-sm p-2">

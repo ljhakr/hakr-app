@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import { defineProps, ref } from 'vue';
-
 import {inject} from "vue";
-
 const myInject = inject('source-type');
+const lowerCase = ref('');
 
 defineProps<{
   title: string
 }>();
-
-const lowerCase = ref('');
 
 </script>
 <template>

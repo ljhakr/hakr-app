@@ -34,6 +34,7 @@ watch(props, async () => {
             <div @click="emits('close');" class="w-1/5 text-end" aria-label="Close modal">X</div>
           </div>
           <div class="modal-body">
+            <h3 :html="'Hello'"></h3>
             <slot name="body">default body</slot>
           </div>
           <div class="modal-footer">

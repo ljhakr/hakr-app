@@ -9,6 +9,11 @@ const items = [
     icon: '1'
   },
   {
+    id: 18,
+    title: 'Playground',
+    url: '/playground',
+  },
+  {
     id: 1,
     title: 'Notice message with slot',
     url: '/notice-messages',
@@ -27,7 +32,7 @@ const items = [
   },
   {
     id: 8,
-    title: 'Reactive counter with notice message',
+    title: 'Reactive counter with notice message and computed with return',
     url: '/reactive-book-counter',
   },
   {
