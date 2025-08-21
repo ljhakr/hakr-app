@@ -13,9 +13,7 @@ coverage/
 
 # Compiled JS outputs from TS in hakr-app subapp
 hakr-app/src/**/*.js.map
-hakr-app/src/validation/**/*.js
 hakr-app/src/validation/**/*.js.map
-hakr-app/src/validation/vee-validate/**/*.js
 hakr-app/src/validation/vee-validate/**/*.js.map
 hakr-app/src/router/**/*.js
 hakr-app/src/router/**/*.js.map
