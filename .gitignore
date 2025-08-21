@@ -1,0 +1,30 @@
+
+# Local OS/IDE
+.DS_Store
+.idea/
+
+# Dependencies
+node_modules/
+yarn-error.log
+
+# Build outputs
+dist/
+coverage/
+
+# Compiled JS outputs from TS in hakr-app subapp
+hakr-app/src/**/*.js.map
+hakr-app/src/validation/**/*.js
+hakr-app/src/validation/**/*.js.map
+hakr-app/src/validation/vee-validate/**/*.js
+hakr-app/src/validation/vee-validate/**/*.js.map
+hakr-app/src/router/**/*.js
+hakr-app/src/router/**/*.js.map
+hakr-app/src/store/**/*.js
+hakr-app/src/store/**/*.js.map
+hakr-app/src/index.js
+hakr-app/src/main.js
+hakr-app/src/registerServiceWorker.js
+
+# Compiled test outputs
+hakr-app/tests/**/*.js
+hakr-app/tests/**/*.js.map
