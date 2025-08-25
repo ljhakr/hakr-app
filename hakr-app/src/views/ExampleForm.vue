@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import {ref} from "vue";
 import RadioInput from '@/components/forms/RadioInput.vue'
-import Checkbox from '@/components/forms/Checkbox.vue'
 import EmailInput from '@/components/forms/EmailInput.vue'
 import TextInput from '@/components/forms/TextInput.vue'
 import TextAreaInput from '@/components/forms/TextAreaInput.vue'

@@ -4,7 +4,8 @@ import {EmojiButton} from '@joeattardi/emoji-button';
 
 interface Props {
   modelValue?: string;
-  options?:  any
+  // eslint-disable-next-line
+  options?: any; // EmojiButton options
 }
 
 const props = withDefaults(defineProps<Props>(), {

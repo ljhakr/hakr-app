@@ -2,11 +2,9 @@
 import PageHeading from '@/components/PageHeading.vue';
 import EventsListButton from '@/components/EventsListButton';
 import EventsList from '@/components/EventsList';
-import TransitionButton from '@/components/TransitionButton';
 import TransitionButton2 from '@/components/TransitionButton2';
 import {ref} from 'vue';
 
-const isDarkTheme = ref(false);
 const isShowButton = ref(true);
 const isShowEventsList = ref(false);
 const events = [
@@ -20,23 +18,14 @@ const events = [
     title: 'Upcoming event 3',
   },
 ];
-
-function toggleTheme() {
-  // rootElement.classList.toggle('dark');
-  document.querySelector('[data-theme]').classList.toggle('dark');
-  isDarkTheme.value = !isDarkTheme.value;
-}
-
 function toggleButton() {
   isShowButton.value = !isShowButton.value;
   console.log('isShowButton value ' + isShowButton.value);
 }
-
 function showEventsList() {
   isShowEventsList.value = !isShowEventsList.value;
   console.log('isShowEventsList value ' + isShowEventsList.value);
 }
-
 </script>
 <template>
   <div class="container bg-white mb-10">

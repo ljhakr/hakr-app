@@ -1,11 +1,10 @@
 <script lang="ts" setup>
-import {Form as VeeForm, Field as VeeField, InputType,  ErrorMessage} from 'vee-validate';
+import {Form as VeeForm, Field as VeeField, ErrorMessage} from 'vee-validate';
 
 import validateCheckbox from "@/validation/vee-validate/checkbox";
 import validateEmail from "@/validation/vee-validate/email";
 import validateText from "@/validation/vee-validate/text";
 import {ref} from "vue";
-import {email} from "@vee-validate/rules";
 
 const submit = (values)=>{
   console.log('Submitted values: ', JSON.stringify(values, null, 2));

@@ -14,32 +14,3 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
-
-//
-//
-//{
-//  "compilerOptions": {
-//    "outDir": "dist",
-//    "rootDir": "src",
-//    "target": "ESNext",
-//    "useDefineForClassFields": true,
-//    "module": "ESNext",
-//    "moduleResolution": "Node",
-//    "strict": true,
-//    "jsx": "preserve",
-//    "resolveJsonModule": true,
-//    "isolatedModules": true,
-//    "esModuleInterop": true,
-//    "lib": ["ESNext", "DOM"],
-//    "skipLibCheck": true,
-//    "noEmit": true,
-//    "types": ["node", "vite/client"],
-//    "baseUrl": "./",
-//    "paths": {
-//      "@/*": ["app/*"],
-//    },
-//    "sourceMap": false
-//  },
-//  "include": ["src/**/*"],
-//  "exclude": ["node_modules"]
-//}
