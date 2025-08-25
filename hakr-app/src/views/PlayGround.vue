@@ -8,7 +8,10 @@ const selectedName = ref('');
 // Simple runtime helper
 const getType = (v: unknown): string => typeof v;
 
-//test line
+// Playground utilities and examples
+// Toggle for showing the testing playground block in the UI
+const showTesting = ref(false);
+
 //========================================================================
 function greet(name: string): string {
   return name;
@@ -19,8 +22,9 @@ function numb(numb1: number, numb2: number): number {
 }
 
 type AddFunction = (x: number, y: number) => number;
+// Adds two numbers and returns their numeric sum
 const add: AddFunction = (a, b) => {
-    return a + b + typeof b; // This will convert string to number if needed
+    return a + b;
 };
 //========================================================================
 const myNumber = 20;
@@ -57,6 +61,20 @@ const someData: SomeDataObj = {
     age: 30
 };
 // ========================================================================
+/*
+Testing playground (intentionally incorrect examples):
+
+The snippets below are kept for experimentation and are intentionally wrong.
+They are commented out so they don't break the build. You can copy them into
+the editor to reproduce errors and learn from the diagnostics.
+
+// Example: return type mismatch (string vs number)
+// type AddFunction = (x: number, y: number) => number;
+// const addBroken: AddFunction = (a, b) => {
+//   return a + b + typeof b; // <- returns string, violates AddFunction
+// };
+
+*/
 </script>
 <template>
   <div class="container bg-white mb-10">
@@ -81,6 +99,28 @@ const someData: SomeDataObj = {
       <li v-for="(value, key) in someData" :key="key">{{ key }}: {{ value }}</li>
     </ul>
     <hr>
+
+    <div class="my-6 text-left">
+      <h3 class="font-medium mb-2">Testing playground</h3>
+      <p class="mb-3 text-sm text-gray-600">
+        This section contains commented examples of intentional errors. Toggle to view the snippets.
+      </p>
+      <button
+        class="bg-gray-200 hover:bg-gray-300 text-gray-900 py-1 px-3 rounded mb-3"
+        type="button"
+        @click="showTesting = !showTesting"
+      >
+        {{ showTesting ? 'Hide' : 'Show' }} examples
+      </button>
+      <div v-if="showTesting" class="p-3 rounded bg-gray-50 border">
+        <pre class="whitespace-pre-wrap text-xs"><code>// Example: return type mismatch (string vs number)
+type AddFunction = (x: number, y: number) => number;
+const addBroken: AddFunction = (a, b) => {
+  return a + b + typeof b; // <- returns string, violates AddFunction
+};
+</code></pre>
+      </div>
+    </div>
 
     <div class="mb-5 w-1/2">
       <input type="text" v-model="selectedName" placeholder="Type to filter names..." class="mb-4 p-2 border rounded">
