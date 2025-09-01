@@ -39,7 +39,7 @@ const products: Product[] = [
   { name: 'Banana', price: 0.8, availability: 50 },
   { name: 'Orange', price: 1.5, availability: 75 },
   { name: 'aTest', price: 1.5, availability: 1 },
-  { name: 'aTest2', price: 1.52, availability: 2 }
+  { name: 'aTest2', price: 1.52, availability: 2 },
   
 ];
 //========================================================================
@@ -113,12 +113,11 @@ the editor to reproduce errors and learn from the diagnostics.
         {{ showTesting ? 'Hide' : 'Show' }} examples
       </button>
       <div v-if="showTesting" class="p-3 rounded bg-gray-50 border">
-        <pre class="whitespace-pre-wrap text-xs"><code>// Example: return type mismatch (string vs number)
+        <pre class="whitespace-pre-wrap text-xs">// Example: return type mismatch (string vs number)
 type AddFunction = (x: number, y: number) => number;
 const addBroken: AddFunction = (a, b) => {
-  return a + b + typeof b; // <- returns string, violates AddFunction
-};
-</code></pre>
+  return a + b + typeof b; // &lt;- returns string, violates AddFunction
+};</pre>
       </div>
     </div>
 
